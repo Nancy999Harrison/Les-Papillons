@@ -1,0 +1,107 @@
+css3...carousel
+/*......................http://codepen.io/muratyesilirmak/pen/keBcL.........*/
+
+div#container {
+    position: relative;
+    margin: 20px auto;
+    padding: 5px;
+   background-color: #f6f6f6;
+
+    box-shadow: 1px 20px 27px -21px #000;
+}
+
+ div#container span {
+   position: absolute;
+     top:339px;
+
+   border-top: 1px solid #fff;
+   border-bottom: 1px solid #fff;
+    width: 1200px;
+    height: 660px;
+
+}
+
+div#container span.slide1 {
+    z-index: 5;
+    -webkit-animation: slider1 50s linear 5s infinite normal
+}
+
+@-webkit-keyframes slider1 {
+    0% {
+        opacity: 1
+    }
+    5% {
+        opacity: 0
+    }
+    85% {
+        opacity: 0
+    }
+    95% {
+        opacity: 1
+    }
+}
+
+div#container span.slide2 {
+    z-index: 4;
+    -webkit-animation: slider2 50s linear 15s infinite normal
+}
+
+@-webkit-keyframes slider2 {
+    0% {
+        opacity: 1
+    }
+    5% {
+        opacity: 0
+    }
+    85% {
+        opacity: 0
+    }
+    95% {
+        opacity: 1
+    }
+}
+
+div#container span.slide3 {
+    z-index: 3;
+    -webkit-animation: slider3 50s linear 25s infinite normal
+}
+
+@-webkit-keyframes slider3 {
+    0% {
+        opacity: 1
+    }
+    5% {
+        opacity: 0
+    }
+    85% {
+        opacity: 0
+    }
+    95% {
+        opacity: 1
+    }
+}
+
+div#container span.slide4 {
+    z-index: 2;
+    -webkit-animation: slider4 50s linear 35s infinite normal
+}
+
+@-webkit-keyframes slider4 {
+    0% {
+        opacity: 1
+    }
+    5% {
+        opacity: 0
+    }
+    85% {
+        opacity: 0
+    }
+    95% {
+        opacity: 1
+    }
+}
+
+div#container span.slide5 {
+    z-index: 1;
+    -webkit-animation: slider5 50s linear 45s infinite normal
+}

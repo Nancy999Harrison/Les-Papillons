@@ -1,0 +1,452 @@
+@margin-bottom: 20px;
+@margin: 0 auto;
+@width: 1200px;
+@bg: #252529;
+@box-shadow: 0 3px 6px 0#0F0F0F;
+@color: #fff;
+@bg_images: url(../img/edited-img/white-flower-header.png);
+@main_background: url(../img/edited-img/rain-mirroir.png) no-repeat 50% 85%,
+#252529;
+@transition: all 0.3s;
+@transform_3d: translate3d(0%, 0%, 0);
+@bg_2: url(../img/edited-img/bg-purple.png);
+@bdr_img: url(../img/Natural-Butterfly-hd-background.jpg);
+@import "https://fonts.googleapis.com/css?family=Italianno|Quicksand";
+
+/*.................PAGE 1................... */
+
+
+/*................BODY................... */
+
+body {
+    font-family: "Quicksand", sans-serif;
+    color: @color;
+    background: @bg;
+    background: @main_background;
+    background-blend-mode: lighten;
+    background-size: 200%;
+}
+
+
+/*.................HEADER................... */
+
+#wrapper {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 0 4px 2px #1F1F1F;
+    box-shadow: 0 0 4px 2px #1F1F1F;
+    header {
+        height: 200px;
+        width: 1200px;
+        background-color: @bg;
+    }
+    #logo {
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        top: -110px;
+        img {
+            -webkit-box-reflect: below -1px -webkit-gradient( linear, left top, left bottom, from(transparent), color-stop( 50%, transparent), to(rgba(255, 255, 255, 0.1)));
+            display: inline;
+        }
+    }
+    h1 {
+        text-align: center;
+    }
+    .header {
+        height: 800px;
+        width: 1200px;
+        margin: 0 auto;
+    }
+    #nav {
+        height: 90px;
+        width: 1100px;
+        background-color: @bg;
+        text-align: center;
+        padding: 25px 0 30px 0;
+        box-sizing: border-box;
+        margin-left: 100px;
+    }
+    ul {
+        li {
+            display: inline-block;
+        }
+        a {
+            display: block;
+            color: @color;
+            font-size: 1.2em;
+            padding: 10px 25px;
+            border: 2px solid transparent;
+            text-decoration: none;
+            -webkit-transition: @transition;
+            -moz-transition: @transition;
+            -o-transition: @transition;
+            transition: @transition;
+            &:hover {
+                border: 2px solid @color;
+            }
+        }
+    }
+    .active {
+        a {
+            &:hover {
+                background-color: @color;
+            }
+        }
+    }
+    form {
+        width: 250px;
+        float: right;
+        span {}
+    }
+    .search {
+        width: 200px;
+        padding: 6px 6px;
+        margin: 2px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        color: #000;
+        box-sizing: border-box;
+    }
+    #submit {
+        width: 30px;
+        height: 30px;
+    }
+    /*..............fichier externe (carousel.css)........................*/
+    /*...............................Contenu................*/
+    .contenu {
+        margin: 0 auto;
+        height: auto;
+        width: 1200px;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: @bg;
+    }
+    .txt {
+        width: 1100px;
+        margin: 0 auto;
+        height: 100px;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 10px;
+        box-sizing: border-box;
+        #titre {
+            text-shadow: 2px 2px 3px #000;
+        }
+    }
+}
+
+.tbl {
+    margin: 0 auto;
+    height: 480px;
+    width: 1000px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    border-bottom: 1px solid @color;
+    border-top: 1px solid @color;
+}
+
+.tbl figure.gallerie {
+    color: @color;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 220px;
+    max-width: 310px;
+    max-height: 220px;
+    width: 100%;
+    background: #000;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.tbl figure.gallerie * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.tbl figure.gallerie img {
+    max-width: 100%;
+    opacity: 1;
+    width: 100%;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+.tbl figure.gallerie figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 30px 3em;
+    width: 100%;
+    height: 100%;
+}
+
+.tbl figure.gallerie figcaption::before {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 100%;
+    border-left: 2px solid rgba(255, 255, 255, 0.8);
+    content: '';
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+.tbl figure.gallerie h2,
+.tbl figure.gallerie p {
+    margin: 0 0 5px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s, -moz-transform 0.35s, -o-transform 0.35s, transform 0.35s;
+}
+
+.tbl figure.gallerie h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+    text-transform: uppercase;
+    -webkit-transform: translate3d(30%, 0%, 0);
+    transform: translate3d(30%, 0%, 0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.tbl figure.gallerie h2 span {
+    font-weight: 600;
+}
+
+.tbl figure.gallerie p {
+    font-weight: 200;
+    -webkit-transform: translate3d(0%, 30%, 0);
+    transform: translate3d(0%, 30%, 0);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.tbl figure.gallerie a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    color: @color;
+    border-radius: 5px;
+}
+
+.tbl figure.gallerie:hover img {
+    opacity: 0.3;
+}
+
+.tbl figure.gallerie:hover figcaption h2 {
+    opacity: 1;
+    -webkit-transform: @transform_3d;
+    transform: @transform_3d;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.tbl figure.gallerie:hover figcaption p {
+    opacity: 0.9;
+    -webkit-transform: @transform_3d;
+    transform: @transform_3d;
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+.tbl figure.gallerie:hover figcaption::before {
+    background: rgba(255, 255, 255, 0);
+    left: 30px;
+    opacity: 1;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.glr {
+    width: 1080px;
+    height: 400px;
+    margin: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 60px;
+}
+
+figure {
+    float: left;
+    margin-right: 10px;
+    margin-left: 15px;
+    border-radius: 5px;
+    border: 1px solid @color;
+    box-sizing: border-box;
+    img {}
+}
+
+.right {
+    img {
+        float: right;
+    }
+}
+
+footer {
+    width: 1200px;
+    height: 200px;
+    background-color: @bg;
+    border-top: 5px solid transparent;
+    border-image-source: @bdr_img;
+    border-image-repeat: repeat;
+    border-image-slice: 120;
+}
+
+h5 {
+    margin-left: 20px;
+}
+
+#media {
+    width: 200px;
+    height: 40px;
+    float: right;
+    margin-right: 20px;
+    img {}
+}
+
+script {}
+
+
+/*.....................................PAGE-2.........................*/
+
+.contenu {
+    width: 1200px;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    video {
+        margin-left: 50px;
+        margin-bottom: 100px;
+        margin-top: 60px;
+        box-sizing: border-box;
+    }
+    source {}
+    .section {
+        margin-top: 60px;
+        height: 350px;
+        width: 1200px;
+        margin: @margin;
+        margin-bottom: 100px;
+    }
+    .newspaper {
+        width: 1100px;
+        margin: @margin;
+        -webkit-column-count: 3;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 3;
+        /* Firefox */
+        column-count: 3;
+        -webkit-column-gap: 40px;
+        /* Chrome, Safari, Opera */
+        -moz-column-gap: 40px;
+        /* Firefox */
+        column-gap: 40px;
+        -webkit-column-rule-style: solid;
+        /* Chrome, Safari, Opera */
+        -moz-column-rule-style: solid;
+        /* Firefox */
+        column-rule-style: solid;
+        padding: 10px;
+        -webkit-box-shadow: 0 0 4px 2px #1F1F1F;
+        box-shadow: 0 0 4px 2px #1F1F1F;
+    }
+    h4 {
+        font-size: 3em;
+        margin-left: 25px;
+        color: #C8BEF7;
+        text-shadow: 2px 2px 3px #000;
+    }
+    p {}
+}
+
+
+/*......................section 2...triangle.........http://1stwebdesigner.com/css-shapes/................*/
+
+.section-2 {
+    width: 950px;
+    height: 170px;
+    margin: @margin;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    -webkit-box-shadow: 0 0 4px 2px #1F1F1F;
+    box-shadow: 0 0 4px 2px #1F1F1F;
+    padding: 15px;
+    box-sizing: border-box;
+    .box_1 {
+        width: 300px;
+        height: 200px;
+        float: left;
+        .triangle_down {
+            width: 0;
+            height: 0;
+            float: right;
+            border-top: 140px solid #46335C;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+        }
+        .triangle_up {
+            width: 0;
+            height: 0;
+            float: right;
+            border-bottom: 140px solid #3C3940;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+        }
+    }
+    .box_2 {
+        width: 300px;
+        height: 200px;
+        float: left;
+        .triangle_down {
+            width: 0;
+            height: 0;
+            border-top: 140px solid #46335C;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+            float: right;
+        }
+        .triangle_up {
+            width: 0;
+            height: 0;
+            border-bottom: 140px solid #3C3940;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+            float: right;
+        }
+    }
+    .box_3 {
+        width: 300px;
+        height: 200px;
+        float: left;
+        .triangle_down {
+            width: 0;
+            height: 0;
+            border-top: 140px solid #46335C;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+            float: right;
+        }
+        .triangle_up {
+            width: 0;
+            height: 0;
+            border-bottom: 140px solid #3C3940;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+            float: right;
+        }
+    }
+}

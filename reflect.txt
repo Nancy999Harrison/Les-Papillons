@@ -1,0 +1,12 @@
+.reflet {
+    background-color: #0bd6d6;
+    width: 175px;
+    height: 175px;
+    display: inline-block;
+    margin: 20px;
+    vertical-align: middle;
+}
+
+.reflet>img {
+    -webkit-box-reflect: below 0px -webkit-gradient( linear, left top, left bottom, from(transparent), color-stop( 50%, transparent), to(rgba(255, 255, 255, 0.4)));
+Chat Conversation End
